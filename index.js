@@ -16,7 +16,7 @@ for (let i = 0; i < data.length; i++) {
   }
 }
 
-const flattenedResult = [].concat(...result).sort((a, b) => a.id - b.id);
+const flattenedResult = [].concat(...result);
 
 fs.writeFile("output.js", JSON.stringify(flattenedResult), (err) => {
   if (err) throw err;
